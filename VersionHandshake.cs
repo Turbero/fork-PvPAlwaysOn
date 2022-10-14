@@ -37,7 +37,7 @@ public static class VerifyClient
 
     private static void Postfix(ZNet __instance)
     {
-        ZRoutedRpc.instance.InvokeRoutedRPC(ZRoutedRpc.instance.GetServerPeerID(), "RequestAdminSync",
+        ZRoutedRpc.instance.InvokeRoutedRPC(ZRoutedRpc.instance.GetServerPeerID(), "PvPAlwaysOnRequestAdminSync",
             new ZPackage());
     }
 }
@@ -48,7 +48,11 @@ public class ShowConnectionError
     private static void Postfix(FejdStartup __instance)
     {
         if (__instance.m_connectionFailedPanel.activeSelf)
+        {
+            __instance.m_connectionFailedError.resizeTextMaxSize = 25;
+            __instance.m_connectionFailedError.resizeTextMinSize = 15;
             __instance.m_connectionFailedError.text += "\n" + PvPAlwaysPlugin.ConnectionError;
+        }
     }
 }
 
