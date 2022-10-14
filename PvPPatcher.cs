@@ -1,53 +1,36 @@
 ﻿using System;
 using HarmonyLib;
+using PvPAlwaysOn.Util;
+using WhereYouAt.Compatibility.WardIsLove;
 
-namespace PvPAlwaysOn
+namespace PvPAlwaysOn;
+
+[HarmonyPatch]
+static class PlayerUpdatePatch
 {
-    [HarmonyPatch]
-    public class PvPPatcher
+    private static bool _insideWard;
+
+    [HarmonyPatch(typeof(Player), nameof(Player.Update))]
+    [HarmonyPatch(typeof(InventoryGui), nameof(InventoryGui.UpdateCharacterStats))]
+    [HarmonyPostfix]
+    static void EnforcePvP(Player __instance)
     {
-        [HarmonyPatch(typeof(Player), nameof(Player.Update))]
-        [HarmonyPostfix]
-        private static void Postfix(Player __instance)
-        {
-            if (!ZNetScene.instance) return;
-            if (Game.m_instance && !Player.m_localPlayer) return;
+        if (!ZNetScene.instance) return;
+        if (Game.m_instance && !Player.m_localPlayer) return;
 
-            if (!PvPAlwaysPlugin._forcePvP.Value) return;
-            try
-            {
-                if (!InventoryGui.instance) return;
-                PvPEnforcer(InventoryGui.instance);
-            }
-            catch (Exception exception)
-            {
-                PvPAlwaysPlugin.PvPAlwaysLogger.LogError($"There was an error in setting the PvP {exception}");
-            }
+        if (PvPAlwaysPlugin.ForcePvP.Value == PvPAlwaysPlugin.Toggle.Off) return;
+        try
+        {
+            if (!InventoryGui.instance) return;
+            _insideWard = WardIsLovePlugin.IsLoaded()
+                ? WardMonoscript.InsideWard(Player.m_localPlayer.transform.position)
+                : PrivateArea.CheckInPrivateArea(Player.m_localPlayer.transform.position);
+            if (_insideWard && PvPAlwaysPlugin.OffInWards.Value == PvPAlwaysPlugin.Toggle.On) return;
+            Functions.PvPEnforcer(InventoryGui.instance);
         }
-
-        [HarmonyPatch(typeof(InventoryGui), nameof(InventoryGui.UpdateCharacterStats))]
-        [HarmonyPostfix]
-        private static void Postfix(InventoryGui __instance)
+        catch (Exception exception)
         {
-            try
-            {
-                if (PvPAlwaysPlugin._forcePvP != null && (!__instance || !PvPAlwaysPlugin._forcePvP.Value)) return;
-                PvPEnforcer(__instance);
-            }
-            catch (Exception exception)
-            {
-                PvPAlwaysPlugin.PvPAlwaysLogger.LogError($"There was an error in setting the PvP {exception}");
-            }
-        }
-
-        private static void PvPEnforcer(InventoryGui invGUI)
-        {
-            if (!Player.m_localPlayer) return;
-            if (PvPAlwaysPlugin._forcePvP is not { Value: true }) return;
-            Player.m_localPlayer.m_pvp = PvPAlwaysPlugin._forcePvP.Value;
-            Player.m_localPlayer.SetPVP(PvPAlwaysPlugin._forcePvP.Value);
-            InventoryGui.instance.m_pvp.isOn = PvPAlwaysPlugin._forcePvP.Value;
-            invGUI.m_pvp.interactable = false;
+            PvPAlwaysPlugin.PvPAlwaysLogger.LogError($"There was an error in setting the PvP {exception}");
         }
     }
 }

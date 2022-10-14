@@ -5,21 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba1f35a1-0c6c-4629-a94a-98b81be191d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PvPAlwaysOn/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PvPAlwaysOn/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PvPAlwaysOn/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PvPAlwaysOn/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ILRepack.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Libs/ServerSync.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PvPAlwaysOn.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PvPAlwaysOn.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PvPAlwaysOn.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PvPAlwaysOn.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PvPPatcher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VersionHandshake.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Util/Compatibility/ModCompat.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Util/Compatibility/WardIsLove/WardIsLovePlugin.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Util/Compatibility/WardIsLove/WardMonoscript.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Util/Functions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PvPAlwaysOn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PvPAlwaysOn/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libs/ServerSync.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libs/ServerSync.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PvPAlwaysOn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PvPAlwaysOn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PvPAlwaysOn.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PvPAlwaysOn.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PvPPatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PvPPatcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VersionHandshake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VersionHandshake.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +26,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b427da81d26480c885ae3fba0ed94c4f8400/be/9cd66d53/InventoryGui.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c9fb31c2eee14ce4aeb36e4c61e154d8118c00/97/c0f62c48/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f03e55267c8e4a37b3946579f3212e7a127a00/0a/683a9b1e/Humanoid.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f03e55267c8e4a37b3946579f3212e7a127a00/3a/cc7d9bac/InventoryGui.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f03e55267c8e4a37b3946579f3212e7a127a00/60/61432180/PrivateArea.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f03e55267c8e4a37b3946579f3212e7a127a00/f1/54d4e027/Character.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f03e55267c8e4a37b3946579f3212e7a127a00/fb/0b699d82/Player.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -43,21 +44,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="rider.run.widget.enabled.cache" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
@@ -80,7 +75,17 @@
       <updated>1639590218297</updated>
       <workItem from="1639590221939" duration="1758000" />
       <workItem from="1639592114350" duration="4653000" />
+      <workItem from="1639598111588" duration="534000" />
+      <workItem from="1665709655794" duration="4389000" />
     </task>
+    <task id="LOCAL-00001" summary="Init">
+      <created>1639598318703</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639598318703</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,5 +108,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init" />
   </component>
 </project>
