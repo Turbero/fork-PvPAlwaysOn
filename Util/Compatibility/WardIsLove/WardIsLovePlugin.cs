@@ -6,7 +6,7 @@ using PvPAlwaysOn.Util.Compatibility;
 namespace WhereYouAt.Compatibility.WardIsLove;
 
 public class WardIsLovePlugin : ModCompat {
-    private const string GUID = "azumatt.WardIsLove";
+    private const string GUID = "Azumatt.WardIsLove";
     private static readonly System.Version MinVersion = new(2, 3, 3);
 
     private static Type ClassType() {
