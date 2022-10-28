@@ -28,6 +28,9 @@ For Questions or Comments, find me in the Odin Plus Team Discord or in mine:
 
 ## Changelog (latest patch listed first)
 
+### 2.0.1
+* Update ServerSync internally.
+
 ### 2.0.0
 * `Note:` You will need to regenerate your configuration file. The file name has changed to fall in line with my other mods. It is now `Azumatt.PvPAlways.cfg`
 * Update ServerSync

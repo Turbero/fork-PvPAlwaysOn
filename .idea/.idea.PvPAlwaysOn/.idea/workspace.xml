@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba1f35a1-0c6c-4629-a94a-98b81be191d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Util/Compatibility/ModCompat.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Util/Compatibility/WardIsLove/WardIsLovePlugin.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Util/Compatibility/WardIsLove/WardMonoscript.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Util/Functions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PvPAlwaysOn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PvPAlwaysOn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libs/ServerSync.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libs/ServerSync.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PvPAlwaysOn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PvPAlwaysOn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PvPAlwaysOn.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PvPAlwaysOn.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PvPPatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PvPPatcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VersionHandshake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VersionHandshake.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,15 +34,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
@@ -76,7 +66,9 @@
       <workItem from="1639590221939" duration="1758000" />
       <workItem from="1639592114350" duration="4653000" />
       <workItem from="1639598111588" duration="534000" />
-      <workItem from="1665709655794" duration="4389000" />
+      <workItem from="1665709655794" duration="5276000" />
+      <workItem from="1665715575575" duration="681000" />
+      <workItem from="1665781316499" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1639598318703</created>
@@ -85,7 +77,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639598318703</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update ServerSync, Ward Compatibility, config file name change, other things.">
+      <created>1665714282188</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665714282188</updated>
+    </task>
+    <task id="LOCAL-00003" summary="version bump 2.0.0">
+      <created>1665714657685</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665714657685</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +115,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init" />
+    <MESSAGE value="Update ServerSync, Ward Compatibility, config file name change, other things." />
+    <MESSAGE value="version bump 2.0.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="version bump 2.0.0" />
   </component>
 </project>
