@@ -28,7 +28,7 @@ For Questions or Comments, find me in the Odin Plus Team Discord or in mine:
 
 ## Changelog (latest patch listed first)
 
-### 2.0.1
+### 2.0.1/2.0.2/2.0.3
 * Update ServerSync internally.
 
 ### 2.0.0

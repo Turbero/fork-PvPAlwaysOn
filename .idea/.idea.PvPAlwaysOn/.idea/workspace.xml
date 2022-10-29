@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba1f35a1-0c6c-4629-a94a-98b81be191d8" name="Changes" comment="fix for WIL" />
+    <list default="true" id="ba1f35a1-0c6c-4629-a94a-98b81be191d8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +20,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f03e55267c8e4a37b3946579f3212e7a127a00/60/61432180/PrivateArea.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f03e55267c8e4a37b3946579f3212e7a127a00/f1/54d4e027/Character.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f03e55267c8e4a37b3946579f3212e7a127a00/fb/0b699d82/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/crypt/RiderProjects/PvPAlwaysOn/PvPAlwaysOn.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/crypt/RiderProjects/PvPAlwaysOn/PvPAlwaysOn.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/crypt/RiderProjects/PvPAlwaysOn/Util/Compatibility/WardIsLove/WardIsLovePlugin.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -69,7 +70,7 @@
       <workItem from="1665709655794" duration="5276000" />
       <workItem from="1665715575575" duration="681000" />
       <workItem from="1665781316499" duration="6000" />
-      <workItem from="1666985480741" duration="317000" />
+      <workItem from="1666985480741" duration="529000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1639598318703</created>
@@ -106,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666985792585</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="v1.0.2">
+      <created>1666985947123</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666985947123</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +142,7 @@
     <MESSAGE value="version bump 2.0.0" />
     <MESSAGE value="v2.0.1" />
     <MESSAGE value="fix for WIL" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix for WIL" />
+    <MESSAGE value="v1.0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.0.2" />
   </component>
 </project>
