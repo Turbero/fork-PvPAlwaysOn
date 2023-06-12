@@ -54,7 +54,7 @@
     </Choose>
     <ItemGroup>
         <Reference Include="0Harmony">
-          <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\core\0Harmony.dll</HintPath>
+          <HintPath>$(GamePath)\BepInEx\core\0Harmony.dll</HintPath>
         </Reference>
         <Reference Include="assembly_guiutils, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <HintPath>$(GamePath)\valheim_Data\Managed\publicized_assemblies\assembly_guiutils_publicized.dll</HintPath>
@@ -66,7 +66,7 @@
             <HintPath>$(GamePath)\valheim_Data\Managed\publicized_assemblies\assembly_valheim_publicized.dll</HintPath>
         </Reference>
         <Reference Include="BepInEx">
-          <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\core\BepInEx.dll</HintPath>
+          <HintPath>$(GamePath)\BepInEx\core\BepInEx.dll</HintPath>
         </Reference>
         <Reference Include="ServerSync, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
             <HintPath>Libs\ServerSync.dll</HintPath>
@@ -101,9 +101,11 @@
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
         <Content Include="README.md" />
+        <Content Include="Thunderstore\CHANGELOG.md" />
         <Content Include="Thunderstore\icon.png" />
         <Content Include="Thunderstore\manifest.json" />
         <Content Include="Thunderstore\README.md" />
+        <Content Include="UpdateManifest.ps1" />
     </ItemGroup>
     <ItemGroup>
         <None Include="packages.config" />
@@ -136,17 +138,30 @@
             <Minor>$(AssemblyVersion.Split('.')[1])</Minor>
             <Patch>$(AssemblyVersion.Split('.')[2])</Patch>
             <PackageName>$(AssemblyName)_v$(Major).$(Minor).$(Patch)</PackageName>
+            <PackageVersion>$(Major).$(Minor).$(Patch)</PackageVersion>
+            <VersionString>$(Major).$(Minor).$(Patch)</VersionString>
             <PackageDir>Thunderstore\$(PackageName)</PackageDir>
         </PropertyGroup>
     </Target>
     <Target Name="Copy" AfterTargets="GetAssemblyVersion">
+        <Exec Command="copy /Y &quot;$(TargetDir)$(AssemblyName).dll&quot; &quot;$(GamePath)\BepInEx\plugins\$(AssemblyName).dll&quot;" />
         <Exec Command="copy /Y &quot;$(TargetDir)$(AssemblyName).dll&quot; &quot;C:\Users\crypt\AppData\Roaming\r2modmanPlus-local\Valheim\profiles\PTB\BepInEx\plugins\_TESTINGMODS\$(AssemblyName).dll&quot;" />
         <Exec Command="copy /Y &quot;README.md&quot; &quot;Thunderstore\README.md&quot;" />
         <!--<Exec Command="copy /Y &quot;$(TargetDir)$(AssemblyName).dll&quot; &quot;C:\Users\crypt\AppData\Roaming\r2modmanPlus-local\Valheim\profiles\BetterWards190\BepInEx\plugins\$(AssemblyName).dll&quot;"/>-->
     </Target>
-    <Target Name="MakeThunderstorePackage" AfterTargets="Copy">
+    <Target Name="UpdateManifestVersion" AfterTargets="Copy" Condition="'$(OS)' == 'Windows_NT'">
         <ItemGroup>
-            <PackageFiles Include="$(TargetDir)$(AssemblyName).dll; Thunderstore\README.md; Thunderstore\manifest.json; Thunderstore\icon.png;" />
+            <ManifestFile Include="$(ProjectDir)Thunderstore\manifest.json" />
+        </ItemGroup>
+
+        <Message Text="ManifestFile is @(ManifestFile)" />
+        <Error Text="Thunderstore\manifest.json not found" Condition="!Exists(@(ManifestFile))" />
+        <Message Text="Updating version number in Thunderstore\manifest.json" Condition="Exists(@(ManifestFile))" />
+        <Exec Command="powershell.exe -ExecutionPolicy Bypass -Command &quot;&amp; { &amp; '$(ProjectDir)UpdateManifest.ps1' -manifestFile '@(ManifestFile)' -versionString '$(PackageVersion)' }&quot;" />
+    </Target>
+    <Target Name="MakeThunderstorePackage" AfterTargets="UpdateManifestVersion" Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <ItemGroup>
+            <PackageFiles Include="$(TargetDir)$(AssemblyName).dll; Thunderstore\README.md; Thunderstore\CHANGELOG.md; Thunderstore\manifest.json; Thunderstore\icon.png;" />
         </ItemGroup>
         <MakeDir Directories="$(PackageDir)" />
         <Copy SourceFiles="@(PackageFiles)" DestinationFolder="$(PackageDir)" />

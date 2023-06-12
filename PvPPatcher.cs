@@ -16,7 +16,7 @@ static class PlayerUpdatePatch
     static void EnforcePvP(Player __instance)
     {
         if (!ZNetScene.instance) return;
-        if (Game.m_instance && !Player.m_localPlayer) return;
+        if (Game.instance && !Player.m_localPlayer) return;
 
         if (PvPAlwaysPlugin.ForcePvP.Value == PvPAlwaysPlugin.Toggle.Off) return;
         try
