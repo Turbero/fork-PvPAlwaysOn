@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba1f35a1-0c6c-4629-a94a-98b81be191d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Thunderstore/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UpdateManifest.ps1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PvPAlwaysOn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PvPAlwaysOn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PvPAlwaysOn.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PvPAlwaysOn.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PvPPatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PvPPatcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Thunderstore/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Thunderstore/manifest.json" afterDir="false" />
-    </list>
+    <list default="true" id="ba1f35a1-0c6c-4629-a94a-98b81be191d8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +24,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="22KdT3Dg2efydySjxkYAgfWK0QZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -92,6 +86,7 @@
       <workItem from="1670348132966" duration="479000" />
       <workItem from="1684600154005" duration="694000" />
       <workItem from="1686586118583" duration="38000" />
+      <workItem from="1686587058569" duration="253000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1639598318703</created>
@@ -156,7 +151,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670348466459</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="0.216.9 updates, v2.0.5">
+      <created>1686587277745</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686587277745</updated>
+    </task>
+    <task id="LOCAL-00011" summary="oops">
+      <created>1686587294438</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1686587294438</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +197,8 @@
     <MESSAGE value="2.0.3" />
     <MESSAGE value="Mistlands" />
     <MESSAGE value="Readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme" />
+    <MESSAGE value="0.216.9 updates, v2.0.5" />
+    <MESSAGE value="oops" />
+    <option name="LAST_COMMIT_MESSAGE" value="oops" />
   </component>
 </project>

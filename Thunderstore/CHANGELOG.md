@@ -1,5 +1,7 @@
 ## Changelog (latest patch listed first)
 
+### 2.0.6
+* Update for Valheim 0.217.22
 ### 2.0.5
 * Update for Valheim 0.216.9
 
