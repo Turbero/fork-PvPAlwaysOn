@@ -10,6 +10,12 @@ The original mod can be found here: https://www.nexusmods.com/valheim/mods/448?t
 
 `**NOTE** This mod is meant to be installed on the server and all clients`
 
+## Compatibility
+
+This mod uses Marketplace and WardIsLove APIs to check if the player is in a PvP/PvE zone. If you are using Marketplace
+it will take precedence over this mod in PvE areas. This mod will not enforce PvP in these zones. WardIsLove and
+BetterWards have a toggle in the configuration file of this mod if you want this mod to take control instead of the toggles inside those mods when inside wards.
+
 If you are installing this manually make sure you have BepInEx installed correctly then put the DLL inside the
 BepInEx/plugins folder on both the server and client to enforce the PvP settings.
 

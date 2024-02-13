@@ -1,5 +1,8 @@
 ## Changelog (latest patch listed first)
 
+### 2.1.0
+* Update ServerSync internally
+* Update for compatibility with Marketplace PvE zones. (KG finally gave me the API). This mod will no longer enforce PvP in Marketplace PvE zones.
 ### 2.0.6
 * Update for Valheim 0.217.22
 ### 2.0.5

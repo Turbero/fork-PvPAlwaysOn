@@ -12,7 +12,7 @@ namespace PvPAlwaysOn;
 public class PvPAlwaysPlugin : BaseUnityPlugin
 {
     internal const string ModName = "PvPAlwaysOn";
-    internal const string ModVersion = "2.0.6";
+    internal const string ModVersion = "2.1.0";
     private const string ModGUID = "Azumatt.PvPAlwaysOn";
     public static string ConnectionError = "";
     private static string ConfigFileName = ModGUID + ".cfg";
@@ -40,9 +40,7 @@ public class PvPAlwaysPlugin : BaseUnityPlugin
         /* General */
         ForcePvP = config("1 - General", "PvPForced", Toggle.On, "Force PvP on the server");
 
-        OffInWards = config("1 - General", "Off In Wards", Toggle.Off,
-            "Toggle this on to disable the enforcement of PvP in wards. WardIsLove & BetterWards compatibility. " +
-            "This just means that this mod will not attempt to enforce PvP in wards. WardIsLove & BetterWards will still enforce PvP in wards if you tell them to.");
+        OffInWards = config("1 - General", "Off In Wards", Toggle.Off, "Toggle this on to disable the enforcement of PvP in wards. WardIsLove & BetterWards compatibility. This just means that this mod will not attempt to enforce PvP in wards. WardIsLove & BetterWards will still enforce PvP in wards if you tell them to.");
 
         harmony.PatchAll(assembly);
 

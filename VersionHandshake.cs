@@ -11,8 +11,7 @@ public static class RegisterAndCheckVersion
     {
         // Register version check call
         PvPAlwaysPlugin.PvPAlwaysLogger.LogDebug("Registering version RPC handler");
-        peer.m_rpc.Register("PvPAlwaysOn_VersionCheck",
-            new Action<ZRpc, ZPackage>(RpcHandlers.RPC_PvPAlwaysOn_Version));
+        peer.m_rpc.Register("PvPAlwaysOn_VersionCheck", new Action<ZRpc, ZPackage>(RpcHandlers.RPC_PvPAlwaysOn_Version));
 
         // Make calls to check versions
         PvPAlwaysPlugin.PvPAlwaysLogger.LogInfo("Invoking version check");
@@ -29,16 +28,14 @@ public static class VerifyClient
     {
         if (!__instance.IsServer() || RpcHandlers.ValidatedPeers.Contains(rpc)) return true;
         // Disconnect peer if they didn't send mod version at all
-        PvPAlwaysPlugin.PvPAlwaysLogger.LogWarning(
-            $"Peer ({rpc.m_socket.GetHostName()}) never sent version or couldn't due to previous disconnect, disconnecting");
+        PvPAlwaysPlugin.PvPAlwaysLogger.LogWarning($"Peer ({rpc.m_socket.GetHostName()}) never sent version or couldn't due to previous disconnect, disconnecting");
         rpc.Invoke("Error", 3);
         return false; // Prevent calling underlying method
     }
 
     private static void Postfix(ZNet __instance)
     {
-        ZRoutedRpc.instance.InvokeRoutedRPC(ZRoutedRpc.instance.GetServerPeerID(), "PvPAlwaysOnRequestAdminSync",
-            new ZPackage());
+        ZRoutedRpc.instance.InvokeRoutedRPC(ZRoutedRpc.instance.GetServerPeerID(), $"{PvPAlwaysPlugin.ModName}RequestAdminSync", new ZPackage());
     }
 }
 
@@ -63,8 +60,7 @@ public static class RemoveDisconnectedPeerFromVerified
     {
         if (!__instance.IsServer()) return;
         // Remove peer from validated list
-        PvPAlwaysPlugin.PvPAlwaysLogger.LogInfo(
-            $"Peer ({peer.m_rpc.m_socket.GetHostName()}) disconnected, removing from validated list");
+        PvPAlwaysPlugin.PvPAlwaysLogger.LogInfo($"Peer ({peer.m_rpc.m_socket.GetHostName()}) disconnected, removing from validated list");
         _ = RpcHandlers.ValidatedPeers.Remove(peer.m_rpc);
     }
 }
@@ -77,16 +73,13 @@ public static class RpcHandlers
     {
         string? version = pkg.ReadString();
         string[] versionTest = version.Split(' ');
-        PvPAlwaysPlugin.PvPAlwaysLogger.LogInfo("Version check, local: " + PvPAlwaysPlugin.ModVersion +
-                                                ",  remote: " + version);
+        PvPAlwaysPlugin.PvPAlwaysLogger.LogInfo($"Version check, local: {PvPAlwaysPlugin.ModVersion},  remote: {version}");
         if (version != PvPAlwaysPlugin.ModVersion)
         {
-            PvPAlwaysPlugin.ConnectionError =
-                $"PvPAlwaysOn Installed: {PvPAlwaysPlugin.ModVersion}\n Needed: {version}";
+            PvPAlwaysPlugin.ConnectionError = $"PvPAlwaysOn Installed: {PvPAlwaysPlugin.ModVersion}\n Needed: {version}";
             if (!ZNet.instance.IsServer()) return;
             // Different versions - force disconnect client from server
-            PvPAlwaysPlugin.PvPAlwaysLogger.LogWarning(
-                $"Peer ({rpc.m_socket.GetHostName()}) has incompatible version, disconnecting");
+            PvPAlwaysPlugin.PvPAlwaysLogger.LogWarning($"Peer ({rpc.m_socket.GetHostName()}) has incompatible version, disconnecting");
             rpc.Invoke("Error", 3);
         }
         else
@@ -99,8 +92,7 @@ public static class RpcHandlers
             else
             {
                 // Add client to validated list
-                PvPAlwaysPlugin.PvPAlwaysLogger.LogInfo(
-                    $"Adding peer ({rpc.m_socket.GetHostName()}) to validated list");
+                PvPAlwaysPlugin.PvPAlwaysLogger.LogInfo($"Adding peer ({rpc.m_socket.GetHostName()}) to validated list");
                 ValidatedPeers.Add(rpc);
             }
         }

@@ -25,7 +25,10 @@ static class PlayerUpdatePatch
             _insideWard = WardIsLovePlugin.IsLoaded()
                 ? WardMonoscript.InsideWard(Player.m_localPlayer.transform.position)
                 : PrivateArea.InsideFactionArea(Player.m_localPlayer.transform.position, Character.Faction.Players);
+            bool isInsideTerritory = Marketplace_API.IsInstalled() && Marketplace_API.IsPointInsideTerritoryWithFlag(Player.m_localPlayer.transform.position, Marketplace_API.TerritoryFlags.PveOnly, out _, out _, out _);
+            if (isInsideTerritory) return;
             if (_insideWard && PvPAlwaysPlugin.OffInWards.Value == PvPAlwaysPlugin.Toggle.On) return;
+
             Functions.PvPEnforcer(InventoryGui.instance);
         }
         catch (Exception exception)
