@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba1f35a1-0c6c-4629-a94a-98b81be191d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Thunderstore/PvPAlwaysOn_v2.1.0.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Util/Compatibility/Marketplace_API.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environment.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PvPAlwaysOn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PvPAlwaysOn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILRepack.targets" beforeDir="false" afterPath="$PROJECT_DIR$/ILRepack.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libs/ServerSync.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libs/ServerSync.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PvPAlwaysOn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PvPAlwaysOn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PvPAlwaysOn.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PvPAlwaysOn.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PvPPatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PvPPatcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Thunderstore/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Thunderstore/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Thunderstore/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Thunderstore/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VersionHandshake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VersionHandshake.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +15,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "AzumattDev"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AzumattDev/PvPAlwaysOn.git",
+    "accountId": "cdee62cd-25b8-4e3d-8e58-bafe16cb00b2"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c9fb31c2eee14ce4aeb36e4c61e154d8118c00/97/c0f62c48/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f03e55267c8e4a37b3946579f3212e7a127a00/0a/683a9b1e/Humanoid.cs" root0="SKIP_HIGHLIGHTING" />
@@ -66,8 +66,8 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\crypt\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\crypt\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\crypt\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\crypt\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
       "C:\\Users\\crypt\\AppData\\Local\\Symbols\\src"
     ]
   }
@@ -106,6 +106,8 @@
       <workItem from="1686587058569" duration="253000" />
       <workItem from="1696552718077" duration="171000" />
       <workItem from="1707843135576" duration="1673000" />
+      <workItem from="1707860117798" duration="194000" />
+      <workItem from="1713667160709" duration="257000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1639598318703</created>
@@ -192,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696552863171</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="v2.1.0, fix compat with marketplace">
+      <option name="closed" value="true" />
+      <created>1707860303179</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707860303179</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +210,9 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+  </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -227,6 +240,7 @@
     <MESSAGE value="0.216.9 updates, v2.0.5" />
     <MESSAGE value="oops" />
     <MESSAGE value="v2.0.6" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.0.6" />
+    <MESSAGE value="v2.1.0, fix compat with marketplace" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.1.0, fix compat with marketplace" />
   </component>
 </project>

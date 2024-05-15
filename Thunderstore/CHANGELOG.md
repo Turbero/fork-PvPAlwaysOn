@@ -1,5 +1,7 @@
 ## Changelog (latest patch listed first)
 
+### 2.1.1
+* Recompile for Ashlands update
 ### 2.1.0
 * Update ServerSync internally
 * Update for compatibility with Marketplace PvE zones. (KG finally gave me the API). This mod will no longer enforce PvP in Marketplace PvE zones.
