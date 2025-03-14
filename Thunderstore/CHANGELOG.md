@@ -1,5 +1,7 @@
 ## Changelog (latest patch listed first)
 
+### 2.1.2
+* Update ServerSync and other shit for 0.220.3
 ### 2.1.1
 * Recompile for Ashlands update
 ### 2.1.0

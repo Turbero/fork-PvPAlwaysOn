@@ -12,7 +12,7 @@ namespace PvPAlwaysOn;
 public class PvPAlwaysPlugin : BaseUnityPlugin
 {
     internal const string ModName = "PvPAlwaysOn";
-    internal const string ModVersion = "2.1.1";
+    internal const string ModVersion = "2.1.2";
     private const string ModGUID = "Azumatt.PvPAlwaysOn";
     public static string ConnectionError = "";
     private static string ConfigFileName = ModGUID + ".cfg";

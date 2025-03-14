@@ -1,7 +1,7 @@
 {
   "name": "PvPAlwaysOn",
   "description": "Remake of mine and TheDefiance2017's mod on nexus made again by request. This is a mod that is intended to be used on a forced PvP server. This mod makes it to where PvP cannot be toggled by the player, and PvP is set to always be on.",
-  "version_number": "2.1.1",
+  "version_number": "2.1.2",
   "website_url": "https://github.com/AzumattDev/PvPAlwaysOn",
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.2202"
