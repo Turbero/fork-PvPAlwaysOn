@@ -29,6 +29,20 @@ static class PlayerUpdatePatch
             if (isInsideTerritory) return;
             if (_insideWard && PvPAlwaysPlugin.OffInWards.Value == PvPAlwaysPlugin.Toggle.On) return;
 
+            if (PvPAlwaysPlugin.OnOffInBiomes.Value.Contains(EnvMan.instance.GetCurrentBiome().ToString()))
+            {
+                if (PvPAlwaysPlugin.OnOffInBiomesRule.Value == PvPAlwaysPlugin.ForcedRule.Pve)
+                {
+                    Player.m_localPlayer.m_pvp = false;
+                    Player.m_localPlayer.SetPVP(false);
+                    InventoryGui.instance.m_pvp.isOn = false;
+                    return;
+                }
+
+                InventoryGui.instance.m_pvp.interactable = true;
+                return;
+            }
+            
             Functions.PvPEnforcer(InventoryGui.instance);
         }
         catch (Exception exception)

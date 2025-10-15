@@ -12,7 +12,7 @@ namespace PvPAlwaysOn;
 public class PvPAlwaysPlugin : BaseUnityPlugin
 {
     internal const string ModName = "PvPAlwaysOn";
-    internal const string ModVersion = "2.1.2";
+    internal const string ModVersion = "2.1.3";
     private const string ModGUID = "Azumatt.PvPAlwaysOn";
     public static string ConnectionError = "";
     private static string ConfigFileName = ModGUID + ".cfg";
@@ -28,6 +28,12 @@ public class PvPAlwaysPlugin : BaseUnityPlugin
         On = 1,
         Off = 0
     }
+    
+    public enum ForcedRule
+    {
+        Pve = 0,
+        Free = 1
+    }
 
     private void Awake()
     {
@@ -41,6 +47,9 @@ public class PvPAlwaysPlugin : BaseUnityPlugin
         ForcePvP = config("1 - General", "PvPForced", Toggle.On, "Force PvP on the server");
 
         OffInWards = config("1 - General", "Off In Wards", Toggle.Off, "Toggle this on to disable the enforcement of PvP in wards. WardIsLove & BetterWards compatibility. This just means that this mod will not attempt to enforce PvP in wards. WardIsLove & BetterWards will still enforce PvP in wards if you tell them to.");
+        
+        OnOffInBiomes = config("1 - General", "On/Off In Biomes List", "", new ConfigDescription("If any value, apply the pvp rule for specific biomes in this list."));
+        OnOffInBiomesRule = config("1 - General", "On/Off In Biomes Rule", ForcedRule.Pve, new ConfigDescription("If any value in biomes list, set up the pvp rule in those specific biomes. Possible values: Pve,Free."));
 
         harmony.PatchAll(assembly);
 
@@ -83,6 +92,8 @@ public class PvPAlwaysPlugin : BaseUnityPlugin
     private static ConfigEntry<Toggle> _serverConfigLocked = null!;
     internal static ConfigEntry<Toggle> ForcePvP = null!;
     internal static ConfigEntry<Toggle> OffInWards = null!;
+    internal static ConfigEntry<string> OnOffInBiomes = null!;
+    internal static ConfigEntry<ForcedRule> OnOffInBiomesRule = null!;
 
     private ConfigEntry<T> config<T>(string group, string name, T value, ConfigDescription description,
         bool synchronizedSetting = true)
